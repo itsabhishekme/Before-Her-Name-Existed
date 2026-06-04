@@ -1,919 +1,279 @@
-'use client';
+import type { Metadata } from "next";
+import {
+  Film,
+  Clock,
+  Heart,
+  Sparkles,
+  Camera,
+  Globe,
+  Star,
+  PlayCircle,
+} from "lucide-react";
 
-import React from 'react';
+export const metadata: Metadata = {
+  title: "Before We Met, We Were Becoming | Documentary",
+  description:
+    "A cinematic documentary exploring destiny, soul recognition, timing, and the invisible paths that lead two people toward each other.",
+};
+
+const milestones = [
+  {
+    title: "Story Research",
+    status: "Completed",
+    progress: 100,
+  },
+  {
+    title: "Narrative Development",
+    status: "Completed",
+    progress: 100,
+  },
+  {
+    title: "Documentary Production",
+    status: "In Progress",
+    progress: 75,
+  },
+  {
+    title: "Visual Storytelling",
+    status: "In Progress",
+    progress: 68,
+  },
+  {
+    title: "Final Release",
+    status: "Upcoming",
+    progress: 15,
+  },
+];
+
+const chapters = [
+  "The Life Before Recognition",
+  "The Invisible Preparation",
+  "Dreams Before Meeting",
+  "The Language of Synchronicity",
+  "Soul Memory",
+  "Crossroads and Timing",
+  "When Paths Begin Converging",
+  "The Becoming",
+];
 
 export default function DocumentaryPage() {
   return (
-    <main className="min-h-screen bg-black text-white">
+    <main className="bg-black text-white overflow-hidden">
+      {/* HERO */}
+
       <section className="relative h-screen flex items-center justify-center">
         <video
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 h-full w-full object-cover"
           src="https://df89zudyl91we6wr.public.blob.vercel-storage.com/Before%20We%20Met%2C%20We%20Were%20Becoming.mp4"
           autoPlay
           muted
           loop
+          playsInline
           controls
         />
-        <div className="absolute inset-0 bg-black/60" />
-        <div className="relative z-10 text-center px-6">
-          <h1 className="text-7xl font-bold mb-6">
-            Before We Met, We Were Becoming
+
+        <div className="absolute inset-0 bg-black/70" />
+
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/10 to-black" />
+
+        <div className="relative z-20 max-w-7xl px-6 text-center">
+          <div className="inline-flex items-center gap-3 rounded-full border border-white/20 bg-white/10 px-6 py-3 backdrop-blur-xl">
+            <Film className="h-4 w-4" />
+            <span>DOCUMENTARY IN PRODUCTION</span>
+          </div>
+
+          <h1 className="mt-10 text-6xl md:text-8xl font-black leading-none">
+            Before We Met,
+            <br />
+            We Were Becoming
           </h1>
-          <p className="text-xl max-w-3xl mx-auto text-zinc-300">
-            A cinematic documentary about soul recognition, destiny, timing,
-            growth, and the invisible journey that existed before love arrived.
-          </p>
-        </div>
-      </section>
-
-      
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 1</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 1 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
-        </div>
-      </section>
-
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 2</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 2 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
-        </div>
-      </section>
-
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 3</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 3 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
-        </div>
-      </section>
-
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 4</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 4 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
-        </div>
-      </section>
-
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 5</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 5 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
-        </div>
-      </section>
-
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 6</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 6 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
-        </div>
-      </section>
-
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 7</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 7 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
-        </div>
-      </section>
-
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 8</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 8 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
-        </div>
-      </section>
-
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 9</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 9 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
-        </div>
-      </section>
-
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 10</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 10 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
-        </div>
-      </section>
-
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 11</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 11 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
-        </div>
-      </section>
-
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 12</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 12 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
-        </div>
-      </section>
-
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 13</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 13 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
-        </div>
-      </section>
-
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 14</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 14 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
-        </div>
-      </section>
-
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 15</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 15 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
-        </div>
-      </section>
-
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 16</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 16 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
-        </div>
-      </section>
-
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 17</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 17 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
-        </div>
-      </section>
-
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 18</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 18 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
-        </div>
-      </section>
-
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 19</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 19 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
-        </div>
-      </section>
-
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 20</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 20 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
-        </div>
-      </section>
-
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 21</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 21 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
-        </div>
-      </section>
-
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 22</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 22 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
-        </div>
-      </section>
-
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 23</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 23 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
-        </div>
-      </section>
-
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 24</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 24 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
-        </div>
-      </section>
-
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 25</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 25 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
-        </div>
-      </section>
-
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 26</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 26 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
-        </div>
-      </section>
-
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 27</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 27 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
-        </div>
-      </section>
-
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 28</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 28 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
-        </div>
-      </section>
-
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 29</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 29 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
-        </div>
-      </section>
-
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 30</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 30 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
-        </div>
-      </section>
-
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 31</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 31 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
-        </div>
-      </section>
-
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 32</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 32 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
-        </div>
-      </section>
-
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 33</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 33 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
-        </div>
-      </section>
-
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 34</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 34 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
-        </div>
-      </section>
 
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 35</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 35 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
-        </div>
-      </section>
-
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 36</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 36 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
-        </div>
-      </section>
-
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 37</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 37 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
-        </div>
-      </section>
-
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 38</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 38 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
-        </div>
-      </section>
-
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 39</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 39 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
+          <p className="mt-8 max-w-3xl mx-auto text-xl text-zinc-300 leading-relaxed">
+            A cinematic exploration of destiny, growth, timing,
+            synchronicities, and the mysterious journey that prepares two
+            souls long before they recognize each other.
           </p>
-        </div>
-      </section>
 
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 40</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 40 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
-        </div>
-      </section>
+          <div className="mt-12 flex justify-center gap-5 flex-wrap">
+            <button className="rounded-full bg-white text-black px-8 py-4 font-semibold flex items-center gap-3">
+              <PlayCircle />
+              Watch Teaser
+            </button>
 
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 41</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 41 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
+            <button className="rounded-full border border-white/20 px-8 py-4 backdrop-blur-xl">
+              Coming Soon
+            </button>
+          </div>
         </div>
       </section>
 
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 42</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 42 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
-        </div>
-      </section>
+      {/* STATUS */}
 
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 43</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 43 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
-        </div>
-      </section>
+      <section className="py-24 border-t border-white/10">
+        <div className="max-w-7xl mx-auto px-6">
 
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 44</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 44 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
-        </div>
-      </section>
+          <div className="grid md:grid-cols-4 gap-8">
 
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 45</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 45 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
-        </div>
-      </section>
+            <div className="rounded-3xl bg-zinc-900 p-8">
+              <Clock className="mb-4" />
+              <h3 className="text-4xl font-bold">75%</h3>
+              <p className="text-zinc-400 mt-2">Production Progress</p>
+            </div>
 
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 46</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 46 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
-        </div>
-      </section>
+            <div className="rounded-3xl bg-zinc-900 p-8">
+              <Heart className="mb-4" />
+              <h3 className="text-4xl font-bold">8</h3>
+              <p className="text-zinc-400 mt-2">Story Chapters</p>
+            </div>
 
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 47</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 47 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
-        </div>
-      </section>
+            <div className="rounded-3xl bg-zinc-900 p-8">
+              <Camera className="mb-4" />
+              <h3 className="text-4xl font-bold">2026</h3>
+              <p className="text-zinc-400 mt-2">Production Year</p>
+            </div>
 
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 48</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 48 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
-        </div>
-      </section>
+            <div className="rounded-3xl bg-zinc-900 p-8">
+              <Sparkles className="mb-4" />
+              <h3 className="text-4xl font-bold">∞</h3>
+              <p className="text-zinc-400 mt-2">Possibilities</p>
+            </div>
 
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 49</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 49 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
+          </div>
         </div>
       </section>
 
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 50</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 50 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
-        </div>
-      </section>
+      {/* ABOUT */}
 
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 51</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 51 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
-        </div>
-      </section>
+      <section className="py-32">
+        <div className="max-w-6xl mx-auto px-6">
 
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 52</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 52 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
-        </div>
-      </section>
+          <div className="text-center">
+            <h2 className="text-6xl font-black">
+              The Story Behind The Story
+            </h2>
 
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 53</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 53 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
-        </div>
-      </section>
+            <p className="mt-10 text-zinc-400 text-xl leading-relaxed max-w-4xl mx-auto">
+              This documentary explores a question many people have asked
+              themselves:
+              <br />
+              <br />
+              Were we already becoming the people we needed to be before we
+              met the person who would change our lives forever?
+            </p>
+          </div>
 
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 54</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 54 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
         </div>
       </section>
 
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 55</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 55 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
-        </div>
-      </section>
+      {/* CHAPTERS */}
 
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 56</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 56 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
-        </div>
-      </section>
+      <section className="py-32 bg-zinc-950">
+        <div className="max-w-7xl mx-auto px-6">
 
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 57</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 57 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
-        </div>
-      </section>
+          <h2 className="text-center text-5xl font-black mb-20">
+            Documentary Chapters
+          </h2>
 
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 58</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 58 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
-        </div>
-      </section>
+          <div className="grid md:grid-cols-2 gap-8">
+            {chapters.map((chapter, index) => (
+              <div
+                key={chapter}
+                className="rounded-3xl border border-white/10 bg-black p-8"
+              >
+                <div className="text-zinc-500 text-sm">
+                  CHAPTER {index + 1}
+                </div>
 
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 59</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 59 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
-        </div>
-      </section>
+                <h3 className="text-3xl font-bold mt-3">
+                  {chapter}
+                </h3>
 
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 60</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 60 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
-        </div>
-      </section>
+                <p className="mt-4 text-zinc-400">
+                  Exploring the hidden forces that guide lives,
+                  relationships, and spiritual evolution.
+                </p>
+              </div>
+            ))}
+          </div>
 
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 61</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 61 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
         </div>
       </section>
 
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 62</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 62 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
-        </div>
-      </section>
+      {/* PROGRESS */}
 
-      <section className="py-24 border-b border-white/10">
+      <section className="py-32">
         <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 63</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 63 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
-        </div>
-      </section>
 
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 64</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 64 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
-        </div>
-      </section>
+          <h2 className="text-center text-5xl font-black mb-20">
+            Production Journey
+          </h2>
 
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 65</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 65 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
-        </div>
-      </section>
+          <div className="space-y-10">
 
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 66</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 66 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
-        </div>
-      </section>
+            {milestones.map((item) => (
+              <div
+                key={item.title}
+                className="rounded-3xl bg-zinc-900 p-8"
+              >
+                <div className="flex justify-between mb-4">
+                  <h3 className="font-bold text-xl">
+                    {item.title}
+                  </h3>
 
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 67</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 67 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
-        </div>
-      </section>
+                  <span className="text-zinc-400">
+                    {item.status}
+                  </span>
+                </div>
 
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 68</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 68 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
-        </div>
-      </section>
+                <div className="h-3 bg-zinc-800 rounded-full overflow-hidden">
+                  <div
+                    className="h-full bg-white rounded-full"
+                    style={{
+                      width: `${item.progress}%`,
+                    }}
+                  />
+                </div>
+              </div>
+            ))}
 
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 69</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 69 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
-        </div>
-      </section>
+          </div>
 
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 70</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 70 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
         </div>
       </section>
 
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 71</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 71 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
-        </div>
-      </section>
+      {/* COMING SOON */}
 
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 72</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 72 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
-        </div>
-      </section>
+      <section className="relative py-40 text-center overflow-hidden">
 
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 73</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 73 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
-        </div>
-      </section>
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-950/40 via-transparent to-blue-950/40" />
 
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 74</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 74 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
-        </div>
-      </section>
+        <div className="relative z-10 max-w-5xl mx-auto px-6">
 
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 75</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 75 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
-        </div>
-      </section>
+          <Globe className="mx-auto h-16 w-16 mb-8" />
 
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 76</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 76 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
-        </div>
-      </section>
+          <h2 className="text-7xl font-black">
+            COMING SOON
+          </h2>
 
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 77</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 77 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
+          <p className="mt-8 text-2xl text-zinc-300">
+            The story is still unfolding.
           </p>
-        </div>
-      </section>
 
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 78</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 78 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
+          <p className="mt-4 text-zinc-500 max-w-3xl mx-auto">
+            Every journey begins before it becomes visible.
+            Every meeting starts long before two paths cross.
+            This documentary is currently being crafted to capture that
+            invisible journey.
           </p>
-        </div>
-      </section>
 
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 79</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 79 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
-        </div>
-      </section>
+          <div className="mt-16 flex justify-center">
+            <div className="rounded-full border border-white/20 px-8 py-4 bg-white/5 backdrop-blur-xl">
+              Release Date To Be Announced
+            </div>
+          </div>
 
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-6">Chapter 80</h2>
-          <p className="text-zinc-300 leading-8">
-            Before we met, we were becoming. This documentary chapter 80 explores
-            destiny, growth, spiritual connection, timing, purpose, and the unseen
-            journey that prepares two souls to recognize each other.
-          </p>
         </div>
       </section>
 
-
-      <section className="py-32 text-center">
-        <h2 className="text-5xl font-bold mb-6">The End</h2>
-        <p className="text-zinc-400">
-          Every ending is the beginning of another chapter.
-        </p>
-      </section>
     </main>
   );
 }
