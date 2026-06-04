@@ -1,4 +1,3 @@
-
 export const SITE_CONFIG = {
   name: "Before Her Name Existed",
   tagline:

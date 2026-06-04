@@ -1,201 +1,422 @@
 import Link from "next/link";
-import {
-  Heart,
-  Sparkles,
-  BookOpen,
-  Stars,
-  Users,
-  ArrowRight,
-} from "lucide-react";
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-black text-white overflow-hidden">
-      {/* Background Effects */}
-      <div className="fixed inset-0 -z-10">
-        <div className="absolute top-20 left-20 h-72 w-72 rounded-full bg-purple-500/10 blur-3xl" />
-        <div className="absolute bottom-20 right-20 h-72 w-72 rounded-full bg-pink-500/10 blur-3xl" />
-        <div className="absolute top-1/2 left-1/2 h-96 w-96 -translate-x-1/2 -translate-y-1/2 rounded-full bg-indigo-500/5 blur-3xl" />
+    <main className="relative min-h-screen overflow-hidden bg-black text-white">
+      {/* Cosmic Background */}
+      <div className="absolute inset-0">
+        <div className="absolute left-0 top-0 h-[600px] w-[600px] rounded-full bg-purple-500/10 blur-[150px]" />
+        <div className="absolute right-0 top-0 h-[600px] w-[600px] rounded-full bg-pink-500/10 blur-[150px]" />
+        <div className="absolute bottom-0 left-1/2 h-[800px] w-[800px] -translate-x-1/2 rounded-full bg-indigo-500/10 blur-[180px]" />
       </div>
 
       {/* Hero */}
-      <section className="relative flex min-h-[70vh] items-center justify-center px-6 pt-24">
-        <div className="max-w-5xl text-center">
-          <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-2 text-sm text-gray-300 backdrop-blur-md">
-            <Stars size={16} />
-            A Collection of Soulmate Stories
+      <section className="relative z-10 pt-36 pb-24">
+        <div className="max-w-6xl mx-auto px-6 text-center">
+          <span
+            className="
+              inline-flex
+              rounded-full
+              border
+              border-purple-500/30
+              bg-purple-500/10
+              px-6
+              py-3
+              text-sm
+              uppercase
+              tracking-[0.3em]
+              text-purple-300
+            "
+          >
+            About The Project
           </span>
 
-          <h1 className="mt-8 text-5xl font-bold leading-tight md:text-7xl">
-            About
-            <span className="block bg-gradient-to-r from-purple-400 via-pink-400 to-yellow-300 bg-clip-text text-transparent">
-              Before Her Name Existed
+          <h1
+            className="
+              mt-8
+              text-5xl
+              md:text-7xl
+              xl:text-8xl
+              font-black
+              leading-none
+            "
+          >
+            Before Her
+            <span
+              className="
+                block
+                bg-gradient-to-r
+                from-purple-400
+                via-pink-400
+                to-yellow-300
+                bg-clip-text
+                text-transparent
+              "
+            >
+              Name Existed
             </span>
           </h1>
 
-          <p className="mx-auto mt-8 max-w-3xl text-lg leading-relaxed text-gray-300 md:text-xl">
-            A storytelling project dedicated to documenting real experiences
-            of soulmate marriages, spiritual recognition, unexplained
-            familiarity, dreams, synchronicities, and the mysterious ways
-            people find each other across time.
+          <p
+            className="
+              mt-8
+              text-xl
+              md:text-2xl
+              italic
+              text-gray-300
+            "
+          >
+            “I loved the story before I knew the character.”
+          </p>
+
+          <p
+            className="
+              mx-auto
+              mt-10
+              max-w-4xl
+              text-lg
+              leading-relaxed
+              text-gray-400
+            "
+          >
+            A digital archive dedicated to documenting real stories of
+            soulmate recognition, future spouse dreams, spiritual signs,
+            synchronicities, meaningful coincidences, and relationships
+            that seemed to begin long before the first meeting.
           </p>
         </div>
       </section>
 
-      {/* Quote */}
-      <section className="px-6 py-20">
-        <div className="mx-auto max-w-5xl rounded-3xl border border-white/10 bg-white/[0.03] p-10 backdrop-blur-xl md:p-16">
-          <p className="text-center text-2xl font-light italic text-gray-200 md:text-4xl">
-            “I loved the story before I knew the character.”
-          </p>
+      {/* Main Story */}
+      <section className="relative z-10 pb-24">
+        <div className="max-w-5xl mx-auto px-6">
+          <div
+            className="
+              rounded-[40px]
+              border
+              border-white/10
+              bg-white/[0.03]
+              p-10
+              md:p-16
+              backdrop-blur-xl
+            "
+          >
+            <h2 className="text-4xl font-bold">
+              Why This Project Exists
+            </h2>
 
-          <div className="mt-8 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+            <div className="mt-8 space-y-6 text-gray-400 leading-relaxed">
+              <p>
+                Across cultures, generations, and spiritual traditions,
+                people describe experiences that challenge ordinary
+                explanations.
+              </p>
 
-          <p className="mx-auto mt-8 max-w-3xl text-center text-gray-400">
-            This single idea inspired the creation of a space where people
-            can share experiences that seem to begin before the first meeting,
-            before the first conversation, and sometimes before a name even
-            exists.
-          </p>
+              <p>
+                Some dream of a future spouse years before meeting.
+                Some experience recurring signs and synchronicities.
+                Others describe an immediate sense of familiarity when
+                meeting someone for the first time.
+              </p>
+
+              <p>
+                Whether these experiences are spiritual, psychological,
+                intuitive, symbolic, or something beyond current
+                understanding, they continue to appear in countless
+                personal stories around the world.
+              </p>
+
+              <p>
+                This project was created to preserve those stories,
+                not to prove any belief system, but to provide a place
+                where people can share meaningful experiences without
+                judgment.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Four Pillars */}
+      <section className="relative z-10 pb-24">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl font-bold">
+              The Four Pillars
+            </h2>
+
+            <p className="mt-4 text-gray-400">
+              Common themes found throughout soulmate stories.
+            </p>
+          </div>
+
+          <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-4">
+            {[
+              {
+                icon: "🌙",
+                title: "Dreams",
+                desc:
+                  "Recurring dreams, visions, symbols, and unexplained encounters before meeting.",
+              },
+              {
+                icon: "✨",
+                title: "Signs",
+                desc:
+                  "Repeated numbers, synchronicities, and meaningful coincidences.",
+              },
+              {
+                icon: "💫",
+                title: "Recognition",
+                desc:
+                  "The feeling of familiarity that appears during a first meeting.",
+              },
+              {
+                icon: "❤️",
+                title: "Union",
+                desc:
+                  "Relationships that lead to growth, purpose, and transformation.",
+              },
+            ].map((item) => (
+              <div
+                key={item.title}
+                className="
+                  rounded-3xl
+                  border
+                  border-white/10
+                  bg-white/[0.03]
+                  p-8
+                  backdrop-blur-xl
+                "
+              >
+                <div className="text-5xl">
+                  {item.icon}
+                </div>
+
+                <h3 className="mt-6 text-2xl font-bold">
+                  {item.title}
+                </h3>
+
+                <p className="mt-4 text-gray-500">
+                  {item.desc}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* Mission */}
-      <section className="px-6 py-20">
-        <div className="mx-auto max-w-7xl">
-          <div className="mb-16 text-center">
-            <h2 className="text-4xl font-bold md:text-5xl">
-              Why This Project Exists
+      <section className="relative z-10 pb-24">
+        <div className="max-w-6xl mx-auto px-6">
+          <div
+            className="
+              rounded-[40px]
+              border
+              border-white/10
+              bg-gradient-to-br
+              from-purple-900/10
+              via-pink-900/10
+              to-indigo-900/10
+              p-12
+              md:p-20
+            "
+          >
+            <h2 className="text-5xl font-bold text-center">
+              Our Mission
             </h2>
 
-            <p className="mx-auto mt-6 max-w-3xl text-gray-400">
-              Not to prove. Not to convince. Not to debate.
-              Simply to listen and document extraordinary human experiences.
+            <div className="mt-10 grid gap-10 md:grid-cols-3">
+              <div>
+                <h3 className="text-2xl font-bold">
+                  Preserve
+                </h3>
+
+                <p className="mt-4 text-gray-400">
+                  Document meaningful stories before they disappear
+                  with time.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-2xl font-bold">
+                  Connect
+                </h3>
+
+                <p className="mt-4 text-gray-400">
+                  Help people discover others who have experienced
+                  similar journeys.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-2xl font-bold">
+                  Explore
+                </h3>
+
+                <p className="mt-4 text-gray-400">
+                  Encourage thoughtful reflection about destiny,
+                  intuition, and human connection.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Community Statistics */}
+      <section className="relative z-10 pb-24">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid gap-6 md:grid-cols-4">
+            {[
+              ["1,200+", "Stories Shared"],
+              ["40+", "Countries"],
+              ["20K+", "Readers"],
+              ["∞", "Possibilities"],
+            ].map(([number, label]) => (
+              <div
+                key={label}
+                className="
+                  rounded-3xl
+                  border
+                  border-white/10
+                  bg-white/[0.03]
+                  p-8
+                  text-center
+                "
+              >
+                <h3
+                  className="
+                    text-4xl
+                    font-bold
+                    bg-gradient-to-r
+                    from-purple-400
+                    via-pink-400
+                    to-yellow-300
+                    bg-clip-text
+                    text-transparent
+                  "
+                >
+                  {number}
+                </h3>
+
+                <p className="mt-3 text-gray-500">
+                  {label}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Quote */}
+      <section className="relative z-10 pb-24">
+        <div className="max-w-5xl mx-auto px-6">
+          <div
+            className="
+              rounded-[40px]
+              border
+              border-white/10
+              bg-white/[0.03]
+              p-12
+              md:p-20
+              text-center
+            "
+          >
+            <div className="text-6xl mb-8">
+              ✨
+            </div>
+
+            <h2
+              className="
+                text-3xl
+                md:text-5xl
+                font-light
+                italic
+                text-gray-200
+              "
+            >
+              “Perhaps the heart recognizes something
+              the mind has not yet learned.”
+            </h2>
+
+            <p className="mt-8 text-purple-400">
+              Before Her Name Existed
             </p>
           </div>
-
-          <div className="grid gap-8 md:grid-cols-3">
-            <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-8 backdrop-blur-xl transition hover:border-purple-400/40">
-              <Heart className="mb-5 text-pink-400" size={40} />
-
-              <h3 className="mb-4 text-2xl font-semibold">
-                Real Stories
-              </h3>
-
-              <p className="text-gray-400 leading-relaxed">
-                Stories from people who experienced soulmate recognition,
-                powerful intuition, recurring dreams, and meaningful
-                relationships that transformed their lives.
-              </p>
-            </div>
-
-            <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-8 backdrop-blur-xl transition hover:border-indigo-400/40">
-              <Sparkles className="mb-5 text-indigo-400" size={40} />
-
-              <h3 className="mb-4 text-2xl font-semibold">
-                Spiritual Curiosity
-              </h3>
-
-              <p className="text-gray-400 leading-relaxed">
-                Exploring questions about destiny, soul connections,
-                synchronicities, karmic relationships, and experiences
-                beyond ordinary explanation.
-              </p>
-            </div>
-
-            <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-8 backdrop-blur-xl transition hover:border-yellow-400/40">
-              <BookOpen className="mb-5 text-yellow-300" size={40} />
-
-              <h3 className="mb-4 text-2xl font-semibold">
-                Shared Human Experience
-              </h3>
-
-              <p className="text-gray-400 leading-relaxed">
-                Bringing together stories from love marriages, arranged
-                marriages, friendships, and unexpected encounters that
-                ultimately led to lifelong partnerships.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Story */}
-      <section className="px-6 py-20">
-        <div className="mx-auto max-w-6xl">
-          <div className="rounded-[40px] border border-white/10 bg-gradient-to-br from-white/[0.04] to-white/[0.01] p-10 backdrop-blur-xl md:p-16">
-            <h2 className="mb-8 text-4xl font-bold md:text-5xl">
-              What We Explore
-            </h2>
-
-            <div className="grid gap-8 md:grid-cols-2">
-              <div>
-                <ul className="space-y-5 text-gray-300">
-                  <li>✦ Dreams about a future spouse</li>
-                  <li>✦ Soulmate recognition stories</li>
-                  <li>✦ Past-life connection experiences</li>
-                  <li>✦ Spiritual signs and synchronicities</li>
-                  <li>✦ Intuition before meeting a partner</li>
-                </ul>
-              </div>
-
-              <div>
-                <ul className="space-y-5 text-gray-300">
-                  <li>✦ Arranged marriage soulmate stories</li>
-                  <li>✦ Unexpected relationship journeys</li>
-                  <li>✦ Personal transformation through love</li>
-                  <li>✦ Destiny and karmic relationship experiences</li>
-                  <li>✦ Unexplained familiarity and connection</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Community */}
-      <section className="px-6 py-20">
-        <div className="mx-auto max-w-5xl text-center">
-          <Users
-            size={60}
-            className="mx-auto mb-8 text-purple-400"
-          />
-
-          <h2 className="text-4xl font-bold md:text-5xl">
-            A Growing Collection of Stories
-          </h2>
-
-          <p className="mx-auto mt-8 max-w-3xl text-lg leading-relaxed text-gray-400">
-            Every story adds another perspective to one of humanity's oldest
-            questions:
-          </p>
-
-          <p className="mx-auto mt-8 max-w-3xl text-2xl italic text-white md:text-3xl">
-            Can someone become part of your story before they ever enter
-            your life?
-          </p>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="px-6 py-24">
-        <div className="mx-auto max-w-5xl rounded-[40px] border border-white/10 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-indigo-900/20 p-12 text-center backdrop-blur-xl">
-          <h2 className="text-4xl font-bold md:text-5xl">
-            Share Your Story
-          </h2>
-
-          <p className="mx-auto mt-6 max-w-2xl text-gray-300">
-            Have you experienced soulmate recognition, dreams, signs,
-            synchronicities, or a connection that felt destined?
-          </p>
-
-          <Link
-            href="/submit"
-            className="mt-10 inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 font-semibold text-black transition hover:scale-105"
+      <section className="relative z-10 pb-32">
+        <div className="max-w-5xl mx-auto px-6">
+          <div
+            className="
+              rounded-[40px]
+              border
+              border-white/10
+              bg-gradient-to-br
+              from-purple-900/10
+              via-pink-900/10
+              to-indigo-900/10
+              p-12
+              md:p-20
+              text-center
+            "
           >
-            Submit Your Story
-            <ArrowRight size={18} />
-          </Link>
+            <h2 className="text-4xl md:text-6xl font-bold">
+              Share Your Story
+            </h2>
+
+            <p
+              className="
+                mx-auto
+                mt-6
+                max-w-3xl
+                text-lg
+                text-gray-400
+              "
+            >
+              Dreams, soulmate recognition, synchronicities,
+              spiritual signs, arranged marriages, love marriages,
+              and meaningful relationships all have a place here.
+            </p>
+
+            <div className="mt-10 flex flex-col gap-5 sm:flex-row sm:justify-center">
+              <Link
+                href="/submit"
+                className="
+                  rounded-full
+                  bg-white
+                  px-10
+                  py-5
+                  text-lg
+                  font-semibold
+                  text-black
+                  transition
+                  hover:scale-105
+                "
+              >
+                Share Your Story ✨
+              </Link>
+
+              <Link
+                href="/stories"
+                className="
+                  rounded-full
+                  border
+                  border-white/15
+                  bg-white/[0.03]
+                  px-10
+                  py-5
+                  text-lg
+                  font-semibold
+                  text-white
+                "
+              >
+                Read Stories
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
     </main>
