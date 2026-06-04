@@ -237,8 +237,7 @@ export default function Home() {
       </section>
 
       <CTA />
-
-      <Footer />
+      
     </main>
   );
 }
