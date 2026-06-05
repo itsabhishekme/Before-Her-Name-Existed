@@ -20,8 +20,8 @@ export default function Navbar() {
       href: "/submit",
     },
     {
-      name: "Documentory",
-      href: "/documentory",
+      name: "Documentary",
+      href: "/documentary",
     },
     {
       name: "About",
