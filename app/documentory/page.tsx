@@ -464,7 +464,7 @@ export default function DocumentaryPage() {
 
       </section>
 
-      
+
       {/* FINAL RELEASE SECTION */}
 
       <section className="relative py-48 overflow-hidden">
