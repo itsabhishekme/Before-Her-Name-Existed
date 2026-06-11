@@ -87,51 +87,158 @@ export default function AboutPage() {
         </div>
       </section>
 
+
       {/* Main Story */}
       <section className="relative z-10 pb-24">
         <div className="max-w-5xl mx-auto px-6">
           <div
             className="
-              rounded-[40px]
-              border
-              border-white/10
-              bg-white/[0.03]
-              p-10
-              md:p-16
-              backdrop-blur-xl
-            "
+        rounded-[40px]
+        border
+        border-white/10
+        bg-white/[0.03]
+        p-10
+        md:p-16
+        backdrop-blur-xl
+      "
           >
-            <h2 className="text-4xl font-bold">
+            <h2 className="text-4xl md:text-5xl font-bold text-white">
               Why This Project Exists
             </h2>
 
-            <div className="mt-8 space-y-6 text-gray-400 leading-relaxed">
+            <div className="mt-10 space-y-8 text-lg leading-relaxed text-gray-400">
+
               <p>
-                Across cultures, generations, and spiritual traditions,
-                people describe experiences that challenge ordinary
-                explanations.
+                Throughout history, people from different countries,
+                cultures, religions, and generations have reported
+                experiences that seem to exist beyond ordinary explanation.
+                These experiences are often deeply personal, emotionally
+                powerful, and difficult to describe using conventional
+                language.
               </p>
 
               <p>
-                Some dream of a future spouse years before meeting.
-                Some experience recurring signs and synchronicities.
-                Others describe an immediate sense of familiarity when
-                meeting someone for the first time.
+                Some people dream of someone they have never met and later
+                encounter a person who resembles that dream in unexpected
+                ways. Others experience recurring symbols, repeated numbers,
+                strange coincidences, or moments of familiarity that seem
+                impossible to explain logically.
               </p>
 
               <p>
-                Whether these experiences are spiritual, psychological,
-                intuitive, symbolic, or something beyond current
-                understanding, they continue to appear in countless
-                personal stories around the world.
+                There are stories of individuals who felt connected to
+                someone long before a relationship began. Some describe
+                dreams that occurred years before meeting a future spouse.
+                Others speak of an immediate recognition when seeing a
+                stranger for the first time, as though the connection
+                already existed somewhere beyond memory.
               </p>
 
               <p>
-                This project was created to preserve those stories,
-                not to prove any belief system, but to provide a place
-                where people can share meaningful experiences without
-                judgment.
+                Many people have shared experiences involving intuition,
+                synchronicities, spiritual encounters, recurring dreams,
+                symbolic messages, unexplained emotions, or a persistent
+                feeling that certain events in their lives were guiding
+                them toward a future they could not yet see.
               </p>
+
+              <p>
+                While interpretations differ, these stories continue to
+                appear across every corner of the world. Some view them
+                through a spiritual lens. Others see them as psychological
+                patterns, subconscious insights, meaningful coincidences,
+                archetypal symbolism, or expressions of human intuition.
+              </p>
+
+              <p>
+                Regardless of interpretation, the experiences themselves
+                remain significant to the people who live them. They become
+                part of personal histories, relationship journeys, and
+                moments that shape how individuals understand themselves
+                and the world around them.
+              </p>
+
+              <p>
+                Yet many people never share these experiences publicly.
+                They worry about being misunderstood, judged, dismissed,
+                or told that what they experienced was not real. As a
+                result, countless meaningful stories remain hidden in
+                journals, private conversations, and personal memories.
+              </p>
+
+              <p>
+                This project was created to provide a respectful space
+                where those stories can be preserved. It is not designed
+                to convince anyone of a particular belief system, religion,
+                philosophy, or worldview. Instead, it exists as a living
+                collection of human experiences.
+              </p>
+
+              <p>
+                Every story submitted here represents a unique perspective.
+                Some stories involve dreams. Some involve love. Some involve
+                unexplained connections, recurring signs, spiritual moments,
+                life-changing encounters, or profound feelings that cannot
+                easily be put into words.
+              </p>
+
+              <p>
+                We believe that stories matter even when answers remain
+                uncertain. Human experience has always been one of the most
+                valuable ways people learn, reflect, and connect with one
+                another.
+              </p>
+
+              <p>
+                By documenting these experiences, we create a place where
+                future generations can explore recurring themes that have
+                appeared across time and culture. Patterns may emerge.
+                Questions may arise. Insights may develop. Yet the purpose
+                remains preservation rather than conclusion.
+              </p>
+
+              <p>
+                Whether your story involves a dream of a future spouse,
+                recurring synchronicities, a feeling of destiny, an
+                unexplainable recognition, or a profound personal
+                experience that changed your life, your voice belongs
+                within this collection.
+              </p>
+
+              <p>
+                Every submission contributes to a growing archive of
+                experiences that might otherwise disappear with time.
+                Together these stories create a record of the mysteries,
+                questions, hopes, connections, and moments that continue
+                to inspire people around the world.
+              </p>
+
+              <p>
+                This is not a place for certainty. It is a place for
+                curiosity. It is a place for reflection. It is a place
+                for stories that deserve to be remembered.
+              </p>
+
+              <div
+                className="
+            mt-12
+            rounded-3xl
+            border
+            border-white/10
+            bg-black/20
+            p-8
+            text-center
+          "
+              >
+                <p className="text-2xl italic text-gray-300">
+                  “Some stories begin long before two people meet.”
+                </p>
+
+                <p className="mt-4 text-purple-400">
+                  Before Her Name Existed
+                </p>
+              </div>
+
             </div>
           </div>
         </div>

@@ -187,31 +187,186 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonial Style */}
-      <section className="py-28 px-6">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-center text-5xl font-bold mb-16">
-            Voices From The Community
-          </h2>
+      {/* Voices From The Community */}
+      <section className="relative py-32 px-6 overflow-hidden">
 
-          <div className="grid md:grid-cols-3 gap-8">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/[0.03] to-transparent" />
+
+        <div className="relative max-w-7xl mx-auto">
+
+          <div className="text-center mb-20">
+            <span
+              className="
+          inline-flex
+          items-center
+          rounded-full
+          border
+          border-white/10
+          bg-white/[0.03]
+          px-5
+          py-2
+          text-sm
+          tracking-widest
+          uppercase
+          text-purple-300
+        "
+            >
+              Shared Experiences
+            </span>
+
+            <h2 className="mt-6 text-5xl md:text-6xl font-bold text-white">
+              Voices From The Community
+            </h2>
+
+            <p className="mt-6 max-w-3xl mx-auto text-lg text-gray-400 leading-relaxed">
+              Every story collected here comes from real people who experienced
+              dreams, synchronicities, unexpected recognition, spiritual moments,
+              and relationships that felt familiar long before they began.
+            </p>
+          </div>
+
+          <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+
             {[
-              "I dreamed about my husband years before we met.",
-              "Our arranged marriage felt like a reunion.",
-              "The familiarity was impossible to explain.",
-            ].map((quote) => (
+              {
+                quote:
+                  "I dreamed about my future husband nearly five years before we met. The dream was so vivid that I wrote every detail in a journal. When we finally crossed paths, I recognized him immediately.",
+                author: "Anonymous",
+                location: "United States",
+              },
+              {
+                quote:
+                  "Our arranged marriage began with complete uncertainty, yet from the first conversation there was a strange sense of peace and familiarity. It felt less like meeting and more like remembering.",
+                author: "Anonymous",
+                location: "India",
+              },
+              {
+                quote:
+                  "I kept seeing the same number sequence for months. At the time it meant nothing to me. Later I realized those moments appeared during every major step that led me to my partner.",
+                author: "Anonymous",
+                location: "Canada",
+              },
+              {
+                quote:
+                  "For years I had recurring dreams about a city I had never visited. Eventually I moved there for work and met the person who would completely change my life.",
+                author: "Anonymous",
+                location: "Australia",
+              },
+              {
+                quote:
+                  "The familiarity was impossible to explain. We were strangers on paper, yet every conversation felt like a continuation of something that had already begun.",
+                author: "Anonymous",
+                location: "United Kingdom",
+              },
+              {
+                quote:
+                  "I experienced repeated synchronicities for nearly a year. Songs, places, dates, and symbols kept appearing in ways that seemed too precise to ignore.",
+                author: "Anonymous",
+                location: "Germany",
+              },
+              {
+                quote:
+                  "The first dream happened when I was nineteen. I saw a face I couldn't identify. Eleven years later I met someone whose smile matched the memory perfectly.",
+                author: "Anonymous",
+                location: "Singapore",
+              },
+              {
+                quote:
+                  "Nothing dramatic happened. There were no visions or signs. Yet from the first moment we met, I felt an unshakable certainty that our paths were meant to cross.",
+                author: "Anonymous",
+                location: "South Africa",
+              },
+              {
+                quote:
+                  "A notebook filled with dreams became one of the most important records of my life. Years later many of those details connected to events I could never have predicted.",
+                author: "Anonymous",
+                location: "New Zealand",
+              },
+            ].map((story, index) => (
               <div
-                key={quote}
-                className="rounded-3xl border border-white/10 bg-white/[0.03] p-8"
+                key={index}
+                className="
+            group
+            rounded-[32px]
+            border
+            border-white/10
+            bg-white/[0.03]
+            p-8
+            backdrop-blur-xl
+            transition-all
+            duration-500
+            hover:border-purple-500/30
+            hover:bg-white/[0.05]
+            hover:-translate-y-1
+          "
               >
-                <p className="italic text-gray-300 leading-relaxed">
-                  "{quote}"
+                <div className="mb-6 text-5xl text-purple-400">
+                  "
+                </div>
+
+                <p className="leading-relaxed text-gray-300 text-lg">
+                  {story.quote}
                 </p>
+
+                <div className="mt-8 pt-6 border-t border-white/10">
+                  <p className="font-medium text-white">
+                    {story.author}
+                  </p>
+
+                  <p className="mt-1 text-sm text-gray-500">
+                    {story.location}
+                  </p>
+                </div>
               </div>
             ))}
+
           </div>
+
+          <div
+            className="
+        mt-24
+        rounded-[40px]
+        border
+        border-white/10
+        bg-white/[0.03]
+        p-12
+        md:p-16
+        text-center
+      "
+          >
+            <h3 className="text-3xl md:text-4xl font-bold text-white">
+              Your Story Matters Too
+            </h3>
+
+            <p className="mt-6 max-w-3xl mx-auto text-gray-400 leading-relaxed">
+              Somewhere in the world, another person may have experienced
+              something remarkably similar to what happened to you. By sharing
+              your story, you contribute to a growing archive of dreams,
+              synchronicities, intuition, meaningful encounters, and
+              unexplained connections that deserve to be remembered.
+            </p>
+
+            <button
+              className="
+          mt-10
+          rounded-full
+          bg-white
+          px-10
+          py-4
+          text-black
+          font-semibold
+          transition-all
+          duration-300
+          hover:scale-105
+        "
+            >
+              Share Your Experience
+            </button>
+          </div>
+
         </div>
       </section>
+
 
       {/* Final CTA */}
       <section className="py-32 px-6">
@@ -236,7 +391,7 @@ export default function Home() {
       </section>
 
       <CTA />
-      
+
     </main>
   );
 }

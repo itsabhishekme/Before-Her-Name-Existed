@@ -123,6 +123,7 @@ export default function StoryForm() {
           onSubmit={handleSubmit}
           className="mt-12 space-y-8"
         >
+
           {/* Personal Information */}
           <div>
             <h3 className="mb-6 text-xl font-semibold text-white">
@@ -132,43 +133,45 @@ export default function StoryForm() {
             <div className="grid gap-6 md:grid-cols-2">
               <input
                 type="text"
-                placeholder="Your Name"
+                placeholder="Full Name"
                 required
-                className="
-                  w-full
-                  rounded-2xl
-                  border
-                  border-white/10
-                  bg-white/[0.04]
-                  px-5
-                  py-4
-                  text-white
-                  placeholder:text-gray-500
-                  outline-none
-                  transition
-                  focus:border-purple-500/40
-                "
+                className="w-full rounded-2xl border border-white/10 bg-white/[0.04] px-5 py-4 text-white placeholder:text-gray-500 outline-none focus:border-purple-500/40"
               />
 
               <input
                 type="email"
                 placeholder="Email Address"
                 required
-                className="
-                  w-full
-                  rounded-2xl
-                  border
-                  border-white/10
-                  bg-white/[0.04]
-                  px-5
-                  py-4
-                  text-white
-                  placeholder:text-gray-500
-                  outline-none
-                  transition
-                  focus:border-purple-500/40
-                "
+                className="w-full rounded-2xl border border-white/10 bg-white/[0.04] px-5 py-4 text-white placeholder:text-gray-500 outline-none focus:border-purple-500/40"
               />
+
+              <input
+                type="number"
+                placeholder="Age"
+                className="w-full rounded-2xl border border-white/10 bg-white/[0.04] px-5 py-4 text-white placeholder:text-gray-500 outline-none focus:border-purple-500/40"
+              />
+
+              <input
+                type="text"
+                placeholder="Country"
+                className="w-full rounded-2xl border border-white/10 bg-white/[0.04] px-5 py-4 text-white placeholder:text-gray-500 outline-none focus:border-purple-500/40"
+              />
+
+              <input
+                type="text"
+                placeholder="City"
+                className="w-full rounded-2xl border border-white/10 bg-white/[0.04] px-5 py-4 text-white placeholder:text-gray-500 outline-none focus:border-purple-500/40"
+              />
+
+              <select
+                className="w-full rounded-2xl border border-white/10 bg-white/[0.04] px-5 py-4 text-white outline-none focus:border-purple-500/40"
+              >
+                <option value="">Relationship Status</option>
+                <option className="bg-black">Single</option>
+                <option className="bg-black">Dating</option>
+                <option className="bg-black">Engaged</option>
+                <option className="bg-black">Married</option>
+              </select>
             </div>
           </div>
 
@@ -179,40 +182,18 @@ export default function StoryForm() {
             </h3>
 
             <div className="space-y-6">
+
               <input
                 type="text"
                 placeholder="Story Title"
                 required
-                className="
-                  w-full
-                  rounded-2xl
-                  border
-                  border-white/10
-                  bg-white/[0.04]
-                  px-5
-                  py-4
-                  text-white
-                  placeholder:text-gray-500
-                  outline-none
-                  transition
-                  focus:border-purple-500/40
-                "
+                className="w-full rounded-2xl border border-white/10 bg-white/[0.04] px-5 py-4 text-white placeholder:text-gray-500 outline-none focus:border-purple-500/40"
               />
 
               <select
-                className="
-                  w-full
-                  rounded-2xl
-                  border
-                  border-white/10
-                  bg-white/[0.04]
-                  px-5
-                  py-4
-                  text-white
-                  outline-none
-                  transition
-                  focus:border-purple-500/40
-                "
+                aria-label="Story category"
+                title="Story category"
+                className="w-full rounded-2xl border border-white/10 bg-white/[0.04] px-5 py-4 text-white outline-none focus:border-purple-500/40"
               >
                 <option value="">Select Category</option>
 
@@ -227,35 +208,84 @@ export default function StoryForm() {
                 ))}
               </select>
 
-              <textarea
-                rows={12}
-                required
-                placeholder="Share your story in as much detail as you'd like. Describe dreams, signs, feelings of familiarity, synchronicities, spiritual experiences, or anything meaningful connected to your relationship journey..."
-                className="
-                  w-full
-                  rounded-3xl
-                  border
-                  border-white/10
-                  bg-white/[0.04]
-                  px-5
-                  py-5
-                  text-white
-                  placeholder:text-gray-500
-                  outline-none
-                  transition
-                  focus:border-purple-500/40
-                "
+              <input
+                type="date"
+                aria-label="Story date"
+                title="Story date"
+                className="w-full rounded-2xl border border-white/10 bg-white/[0.04] px-5 py-4 text-white outline-none focus:border-purple-500/40"
               />
+
+              <textarea
+                rows={14}
+                required
+                placeholder="Describe your complete experience..."
+                className="w-full rounded-3xl border border-white/10 bg-white/[0.04] px-5 py-5 text-white placeholder:text-gray-500 outline-none focus:border-purple-500/40"
+              />
+
+              <textarea
+                rows={8}
+                placeholder="What emotions did you feel during this experience?"
+                className="w-full rounded-3xl border border-white/10 bg-white/[0.04] px-5 py-5 text-white placeholder:text-gray-500 outline-none focus:border-purple-500/40"
+              />
+
+              <textarea
+                rows={8}
+                placeholder="Did any signs, symbols, numbers, names, places, or messages appear?"
+                className="w-full rounded-3xl border border-white/10 bg-white/[0.04] px-5 py-5 text-white placeholder:text-gray-500 outline-none focus:border-purple-500/40"
+              />
+            </div>
+          </div>
+
+          {/* Dream Information */}
+          <div>
+            <h3 className="mb-6 text-xl font-semibold text-white">
+              Dream & Spiritual Details
+            </h3>
+
+            <div className="grid gap-6 md:grid-cols-2">
+
+              <select className="w-full rounded-2xl border border-white/10 bg-white/[0.04] px-5 py-4 text-white">
+                <option>Dream Frequency</option>
+                <option className="bg-black">Once</option>
+                <option className="bg-black">Few Times</option>
+                <option className="bg-black">Monthly</option>
+                <option className="bg-black">Weekly</option>
+                <option className="bg-black">Very Frequently</option>
+              </select>
+
+              <select className="w-full rounded-2xl border border-white/10 bg-white/[0.04] px-5 py-4 text-white">
+                <option>Did you later meet this person?</option>
+                <option className="bg-black">Yes</option>
+                <option className="bg-black">No</option>
+                <option className="bg-black">Not Yet</option>
+              </select>
+
+              <select className="w-full rounded-2xl border border-white/10 bg-white/[0.04] px-5 py-4 text-white">
+                <option>How strong was the connection?</option>
+                <option className="bg-black">Mild</option>
+                <option className="bg-black">Moderate</option>
+                <option className="bg-black">Strong</option>
+                <option className="bg-black">Life-Changing</option>
+              </select>
+
+              <select className="w-full rounded-2xl border border-white/10 bg-white/[0.04] px-5 py-4 text-white">
+                <option>Do you believe this was destiny?</option>
+                <option className="bg-black">Yes</option>
+                <option className="bg-black">Maybe</option>
+                <option className="bg-black">Not Sure</option>
+              </select>
+
             </div>
           </div>
 
           {/* Experience Checklist */}
           <div>
             <h3 className="mb-6 text-xl font-semibold text-white">
-              Which experiences relate to your story?
+              Experiences Connected To Your Story
             </h3>
 
             <div className="grid gap-4 md:grid-cols-2">
+
               {[
                 "Future Spouse Dream",
                 "Soulmate Recognition",
@@ -265,45 +295,77 @@ export default function StoryForm() {
                 "Strong Intuition",
                 "Synchronicities",
                 "Destiny Feeling",
+                "11:11 Encounters",
+                "Telepathic Feeling",
+                "Recurring Person",
+                "Karmic Connection",
+                "Twin Flame Experience",
+                "Unexplained Attraction",
+                "Prophetic Dream",
+                "Divine Timing",
               ].map((item) => (
                 <label
                   key={item}
-                  className="
-                    flex
-                    items-center
-                    gap-3
-                    rounded-2xl
-                    border
-                    border-white/10
-                    bg-white/[0.03]
-                    p-4
-                    text-gray-300
-                    cursor-pointer
-                  "
+                  className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.03] p-4 text-gray-300 cursor-pointer"
                 >
-                  <input
-                    type="checkbox"
-                    className="h-4 w-4"
-                  />
-
+                  <input type="checkbox" className="h-4 w-4" />
                   {item}
                 </label>
               ))}
             </div>
           </div>
 
-          {/* Quote Block */}
-          <div
-            className="
-              rounded-3xl
-              border
-              border-white/10
-              bg-black/30
-              p-8
-              text-center
-            "
-          >
-            <p className="text-2xl italic text-gray-300">
+          {/* Media Upload */}
+          <div>
+            <h3 className="mb-6 text-xl font-semibold text-white">
+              Supporting Material
+            </h3>
+
+            <label htmlFor="supportingMaterial" className="sr-only">
+              Upload supporting material
+            </label>
+            <input
+              id="supportingMaterial"
+              type="file"
+              multiple
+              className="w-full rounded-2xl border border-dashed border-white/20 bg-white/[0.03] px-5 py-6 text-gray-400"
+            />
+
+            <p className="mt-3 text-sm text-gray-500">
+              Upload dream journals, screenshots, artwork, letters,
+              sketches, signs, or supporting evidence.
+            </p>
+          </div>
+
+          {/* Author Preference */}
+          <div>
+            <h3 className="mb-6 text-xl font-semibold text-white">
+              Publishing Preference
+            </h3>
+
+            <div className="space-y-4">
+
+              <label className="flex items-center gap-3 text-gray-300">
+                <input type="radio" name="privacy" />
+                Publish with my full name
+              </label>
+
+              <label className="flex items-center gap-3 text-gray-300">
+                <input type="radio" name="privacy" />
+                Publish with first name only
+              </label>
+
+              <label className="flex items-center gap-3 text-gray-300">
+                <input type="radio" name="privacy" />
+                Publish anonymously
+              </label>
+
+            </div>
+          </div>
+
+          {/* Quote Section */}
+          <div className="rounded-3xl border border-white/10 bg-black/30 p-10 text-center">
+            <p className="text-3xl italic text-gray-300">
               “Perhaps your story began before the meeting.”
             </p>
 
@@ -313,15 +375,7 @@ export default function StoryForm() {
           </div>
 
           {/* Agreement */}
-          <div
-            className="
-              rounded-2xl
-              border
-              border-white/10
-              bg-white/[0.03]
-              p-6
-            "
-          >
+          <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
             <label className="flex gap-4">
               <input
                 type="checkbox"
@@ -330,35 +384,36 @@ export default function StoryForm() {
               />
 
               <span className="text-gray-400">
-                I confirm that this story is based on my own
-                experience and I grant permission for it to be
-                published on the website, with personal information
-                removed if necessary.
+                I confirm that this submission is based on my own
+                experience. I grant permission for publication on
+                Before Her Name Existed and understand that personal
+                information may be edited or removed for privacy and
+                clarity purposes.
               </span>
             </label>
           </div>
 
           {/* Submit Button */}
-          <div className="text-center">
+          <div className="text-center pt-4">
             <button
               type="submit"
               className="
-                rounded-full
-                bg-white
-                px-12
-                py-5
-                text-lg
-                font-semibold
-                text-black
-                transition-all
-                duration-300
-                hover:scale-105
-              "
+      rounded-full
+      bg-white
+      px-14
+      py-5
+      text-lg
+      font-semibold
+      text-black
+      transition-all
+      duration-300
+      hover:scale-105
+      hover:shadow-2xl
+    "
             >
               Submit Your Story ✨
             </button>
           </div>
-
           {/* Footer Text */}
           <div className="text-center">
             <p className="mx-auto max-w-2xl text-sm text-gray-500">
