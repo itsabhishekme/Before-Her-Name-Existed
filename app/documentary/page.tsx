@@ -6,7 +6,6 @@ import {
   Sparkles,
   Camera,
   Globe,
-  Star,
   PlayCircle,
 } from "lucide-react";
 
@@ -15,34 +14,6 @@ export const metadata: Metadata = {
   description:
     "A cinematic documentary exploring destiny, soul recognition, timing, and the invisible paths that lead two people toward each other.",
 };
-
-const milestones = [
-  {
-    title: "Story Research",
-    status: "Completed",
-    progress: 100,
-  },
-  {
-    title: "Narrative Development",
-    status: "Completed",
-    progress: 100,
-  },
-  {
-    title: "Documentary Production",
-    status: "In Progress",
-    progress: 75,
-  },
-  {
-    title: "Visual Storytelling",
-    status: "In Progress",
-    progress: 68,
-  },
-  {
-    title: "Final Release",
-    status: "Upcoming",
-    progress: 15,
-  },
-];
 
 const chapters = [
   "The Life Before Recognition",
@@ -102,6 +73,118 @@ export default function DocumentaryPage() {
             <button className="rounded-full border border-white/20 px-8 py-4 backdrop-blur-xl">
               Coming Soon
             </button>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="official-trailer"
+        className="relative overflow-hidden rounded-[32px] border border-white/10 bg-gradient-to-b from-zinc-900 via-black to-black p-6 md:p-10 lg:p-14"
+      >
+        {/* Background Effects */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.08),transparent_60%)]" />
+        <div className="absolute -top-32 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-white/5 blur-3xl" />
+        <div className="absolute bottom-0 left-0 h-80 w-80 rounded-full bg-white/[0.02] blur-3xl" />
+        <div className="absolute right-0 top-0 h-80 w-80 rounded-full bg-white/[0.02] blur-3xl" />
+
+        <div className="relative z-10 mx-auto max-w-7xl">
+          {/* Header */}
+          <div className="text-center">
+            <div className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-5 py-2 text-xs uppercase tracking-[0.35em] text-zinc-400">
+              Official Trailer
+            </div>
+
+            <h2 className="mt-6 text-4xl font-bold text-white md:text-6xl">
+              Before Her Name Existed
+            </h2>
+
+            <div className="mx-auto mt-6 h-px w-24 bg-gradient-to-r from-transparent via-white/30 to-transparent" />
+
+            <p className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-zinc-400 md:text-lg">
+              A journey through memory, longing, destiny, and the invisible thread
+              connecting two souls before they ever met. Experience the emotional
+              world behind the book through this cinematic visual trailer.
+            </p>
+          </div>
+
+          {/* Video */}
+          <div className="mt-12">
+            <div className="group relative overflow-hidden rounded-[30px] border border-white/10 bg-black shadow-[0_0_100px_rgba(255,255,255,0.05)]">
+              <video
+                controls
+                preload="metadata"
+                playsInline
+                className="aspect-video w-full"
+              >
+                <source
+                  src="https://df89zudyl91we6wr.public.blob.vercel-storage.com/Trailer/Before%20HerName%20Existed.mp4"
+                  type="video/mp4"
+                />
+                Your browser does not support the video tag.
+              </video>
+
+              <div className="pointer-events-none absolute inset-0 rounded-[30px] ring-1 ring-white/10" />
+            </div>
+          </div>
+
+          {/* Top Comment */}
+          <div className="mt-14 rounded-[30px] border border-white/10 bg-white/[0.03] p-6 md:p-8 backdrop-blur-xl">
+            <div className="mb-6 flex items-center justify-between">
+              <h3 className="text-xl font-semibold text-white">
+                Most Loved Comment
+              </h3>
+
+              <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs uppercase tracking-widest text-zinc-400">
+                Top Comment
+              </span>
+            </div>
+
+            <div className="flex items-start gap-4">
+              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-white/20 to-white/5 text-xl font-bold text-white">
+                V
+              </div>
+
+              <div className="flex-1">
+                <div className="flex flex-wrap items-center gap-3">
+                  <h4 className="font-semibold text-white">
+                    Vihaan Writes Reader
+                  </h4>
+
+                  <span className="rounded-full bg-green-500/10 px-2 py-1 text-xs text-green-400">
+                    Verified Reader
+                  </span>
+                </div>
+
+                <p className="mt-4 text-lg leading-relaxed text-zinc-300">
+                  “Some stories are written after meeting someone. This one was
+                  written before. Watching this felt like stepping into a memory that
+                  existed long before words. It felt less like a trailer and more
+                  like remembering something my soul already knew.”
+                </p>
+
+                <div className="mt-6 flex flex-wrap items-center gap-6 text-sm text-zinc-500">
+                  <span>❤️ 4.8K Likes</span>
+                  <span>💬 327 Replies</span>
+                  <span>🔖 Saved 1.2K Times</span>
+                  <span>↗ Shared 890 Times</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Quote */}
+          <div className="mt-12 text-center">
+            <div className="mx-auto max-w-4xl rounded-[30px] border border-white/10 bg-white/[0.02] px-8 py-10">
+              <p className="text-xl italic leading-relaxed text-zinc-300 md:text-2xl">
+                “The story was never being written.
+                <br />
+                It was waiting to be remembered.”
+              </p>
+
+              <div className="mt-6 text-sm uppercase tracking-[0.3em] text-zinc-500">
+                — Vihaan
+              </div>
+            </div>
           </div>
         </div>
       </section>
