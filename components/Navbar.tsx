@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import Image from "next/image";
 
 export default function Navbar() {
   const [mobileMenu, setMobileMenu] = useState(false);
@@ -59,42 +60,50 @@ export default function Navbar() {
             >
               <div
                 className="
-                  flex
-                  h-12
-                  w-12
-                  items-center
-                  justify-center
-                  rounded-2xl
-                  border
-                  border-white/10
-                  bg-white/[0.04]
-                  backdrop-blur-xl
-                "
+      flex
+      h-12
+      w-12
+      items-center
+      justify-center
+      rounded-2xl
+      border
+      border-white/10
+      bg-white/[0.04]
+      backdrop-blur-xl
+      overflow-hidden
+    "
               >
-                ✨
+                <Image
+                  src="/logo.png"
+                  alt="Before Her Name Existed Logo"
+                  width={48}
+                  height={48}
+                  className="h-full w-full object-contain"
+                  priority
+                />
               </div>
 
               <div>
                 <h1
                   className="
-                    text-lg
-                    md:text-xl
-                    font-bold
-                    text-white
-                  "
+        text-lg
+        md:text-xl
+        font-bold
+        text-white
+      "
                 >
                   Before Her Name Existed
                 </h1>
 
                 <p
                   className="
-                    hidden
-                    md:block
-                    text-xs
-                    tracking-widest
-                    uppercase
-                    text-gray-500
-                  "
+        hidden
+        md:block
+        text-xs
+        tracking-widest
+        uppercase
+        text-gray-500
+      "
                 >
                   Soulmate Stories & Spiritual Connections
                 </p>
